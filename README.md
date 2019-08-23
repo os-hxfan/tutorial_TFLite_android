@@ -27,7 +27,7 @@ The [tutorial](https://www.tensorflow.org/lite/examples/) mentioned above only o
 1. Put you quantized model on [`asset folder`](https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/android/app/src/main/assets) and revise the path in the code [here](https://github.com/tensorflow/examples/blob/34884ff54ffbba5e4466f87e1347000adabcd930/lite/examples/object_detection/android/app/src/main/java/org/tensorflow/lite/examples/detection/DetectorActivity.java#L55). Pls also make sure your label.txt in `asset folder` is corresponding to the your dataset.
 
 # 4. Demo
-
+The significant performance improvement can be seen when comparing these floating point with 8-bit quantization.
 <table><tr align="center"><td><font size="4">Floating-point Demo</font><img src="./demo/float.GIF" width="300" height="300"></td><td><font size="4">8-bit demo</font><img src="./demo/quant.GIF" width="300" height="300"></td></tr></table>
 
 # 5. Object Detection
