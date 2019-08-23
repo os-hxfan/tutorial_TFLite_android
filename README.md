@@ -7,14 +7,15 @@ Tutorial of how to deloy DNN on android device using TFLite.
 - [1. Tutorial_TFLite_android](#1-tutorial_tflite_android)
 - [2. Content](#2-content)
 - [3. Quick Start](#3-quick-start)
-    - [3.1. Quick Demo](#31-quick-demo)
+    - [3.1. Quick Guide](#31-quick-guide)
     - [3.2. 8-bit Quantization and Deployment on android](#32-8-bit-quantization-and-deployment-on-android)
-- [Object Detection](#object-detection)
+- [4. Demo](#4-demo)
+- [5. Object Detection](#5-object-detection)
 
 <!-- /TOC -->
 
 # 3. Quick Start
-## 3.1. Quick Demo
+## 3.1. Quick Guide
 You can follow the tutorial [here](https://www.tensorflow.org/lite/examples/). Unfortunately, only the demo of classfication works. When you run the object detection demo on your phone, it will report the runtime error "Object Detector not found". The reason is that it is lack of a shared library. This tutorial will introduce how to solve this on [this section](#object-detection).
 
 
@@ -25,7 +26,11 @@ The [tutorial](https://www.tensorflow.org/lite/examples/) mentioned above only o
 1. Using [TFLite Convertor](https://www.tensorflow.org/api_docs/python/tf/lite/TFLiteConverter) to convert the fake quantized model to tflite model. Note that the operator list needs to contrain all the intermediate operators. You can do this in both command line and python code.
 1. Put you quantized model on [`asset folder`](https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/android/app/src/main/assets) and revise the path in the code [here](https://github.com/tensorflow/examples/blob/34884ff54ffbba5e4466f87e1347000adabcd930/lite/examples/object_detection/android/app/src/main/java/org/tensorflow/lite/examples/detection/DetectorActivity.java#L55). Pls also make sure your label.txt in `asset folder` is corresponding to the your dataset.
 
-# Object Detection
+# 4. Demo
+
+<table><tr align="center"><td><font size="4">Floating-point Demo</font><img src="./demo/float.GIF" width="300" height="300"></td><td><font size="4">8-bit demo</font><img src="./demo/quant.GIF" width="300" height="300"></td></tr></table>
+
+# 5. Object Detection
 I have build the example project your you in `example` folder.
 1. Download bazel 0.19 and tensorflow 1.13 for cross-compilation. Note that **version much be matched**, which mean if you are going to change tensorflow version, you need to change the bazel version accordingly.
 1. Install Android Studio, NDK and SDK according to the guidence [here](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android), then set their environment variable to their path accordingly.
