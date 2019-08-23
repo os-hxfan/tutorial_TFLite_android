@@ -28,7 +28,7 @@ The [tutorial](https://www.tensorflow.org/lite/examples/) mentioned above only o
 
 # 4. Demo
 The significant performance improvement can be seen when comparing these floating point with 8-bit quantization.
-<table><tr align="center"><td><font size="4">Floating-point Demo</font><img src="./demo/float.GIF" width="300" height="300"></td><td><font size="4">8-bit demo</font><img src="./demo/quant.GIF" width="300" height="300"></td></tr></table>
+<table><tr align="center"><td><font size="4">Floating-point Demo</font><img src="./demo/float.GIF" width="450" height="450"></td><td><font size="4">8-bit demo</font><img src="./demo/quant.GIF" width="450" height="450"></td></tr></table>
 
 # 5. Object Detection
 I have build the example project your you in `example` folder.
